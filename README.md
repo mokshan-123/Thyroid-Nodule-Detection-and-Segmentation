@@ -536,7 +536,7 @@ Pillow>=10.0.0
 
 ### 4. Download model weights
 
-The trained weights are not stored in this repository due to file size. Download them from the release page or your own training outputs, then update the paths in `pipeline.py`:
+The trained weights are not stored in this repository due to file size. Download them from the given google drive folders or use your own training outputs, then update the paths in `pipeline.py`:
 
 ```python
 RCNN_WEIGHTS_PATH       = "path/to/best_fasterrcnn.pth"
