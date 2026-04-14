@@ -314,7 +314,7 @@ Test set confusion matrix (1000 samples):
 
 ResNet-50 at threshold 0.3 correctly identifies 634/731 malignant cases (86.7% recall). The tighter train/val accuracy curves across all 3 folds compared to DenseNet suggest ResNet generalises more uniformly — confirming that the two models have complementary error patterns, which is what makes the ensemble effective.
 
-![ResNet Learning Curves](ResNet-50%20model%50data/resnet_learning_curves.png)
+![ResNet Learning Curves](ResNet-50%20model%20data/resnet_learning_curves.png)
 
 **Learning curve analysis (3-Fold K-Fold):**
 
