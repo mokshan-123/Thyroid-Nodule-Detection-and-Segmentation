@@ -474,22 +474,37 @@ thyroid-nodule-detection/
 ├── app.py                          # Streamlit web interface
 ├── pipeline.py                     # All model + processing logic
 │
-├── notebooks/
-│   ├── classify-thyroid-nodules.ipynb          # Dataset exploration & RCNN training
-│   ├── cnn-for-thyroisd.ipynb                  # DenseNet-121 training
-│   ├── cnn-with-resnet-for-thyroid-classification.ipynb  # ResNet-50 training
-│   └── Resnet_pipeline_with_contour.ipynb      # Full inference pipeline (notebook form)
-│
-├── weights/                        # (not included — see Setup)
-│   ├── best_fasterrcnn.pth
-│   ├── best_densenet_fold1.pth
-│   ├── best_densenet_fold2.pth
-│   ├── best_densenet_fold3.pth
-│   ├── best_resnet50_fold1.pth
-│   ├── best_resnet50_fold2.pth
-│   └── best_resnet50_fold3.pth
-│
-└── requirements.txt
+├── Data/
+│   └── Have some ultrasound images
+│   
+├── DenseNet-121 Model data/                        
+│   ├── confusion matrices
+│   ├── Model weights Drive link.md
+│   ├── __notebook_source__.ipynb
+│   ├── cnn-for-thyroisd.ipynb
+│   ├── densenet_gt_vs_pred.png
+│   └── densenet_learning_curves.png
+├── ResNet-50 model data/                        
+│   ├── confusion matrices
+│   ├── Model weights Drive link.md
+│   ├── __notebook_source__.ipynb
+│   ├── cnn-with-resnet-for-thyroid-classification.ipynb
+│   ├── resnet_gt_vs_pred.png
+│   └── resnet_learning_curves.png
+├── RCNN Model Data/                        
+│   ├── Images
+│   ├── Model weight Drive link.md
+│   ├── Predictions.png
+│   ├── Training curve_2.png
+│   ├── __notebook_source__.ipynb
+│   ├── classify-thyroid-nodules.ipynb
+│   ├── comparison.png
+│   └──training curve.png
+├── Final Pipelines/                        
+│   ├── Combined pipeline.ipynb
+│   ├── Final pipeline(denseNet).ipynb
+│   └── combined_pipeline_with_contour.ipynb
+└── README.md  
 ```
 
 ---
