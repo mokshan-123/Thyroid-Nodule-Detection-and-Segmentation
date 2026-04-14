@@ -260,7 +260,7 @@ The detection model was trained for 10 epochs. Training loss decreased steadily 
 - Validation loss dropped sharply in the first 4 epochs then plateaued in the 0.110–0.124 range, with a minor spike at epoch 7 before recovering.
 - The ~0.036 train/val gap at epoch 10 is modest for a two-stage detector fine-tuned on a moderate-sized medical dataset, and does not indicate problematic overfitting.
 - The slight uptick in train loss at epoch 6 is characteristic of SGD with step-decay learning rate schedules (momentary instability at the LR step boundary).
-
+---
 ### DenseNet-121
 
 | Metric | Value |
@@ -300,7 +300,7 @@ The learning curves show a consistent train/val gap across all 3 folds — chara
 - The validation loss plateau is stable (no sustained divergence), meaning the model is not catastrophically overfitting — the dropout (p=0.5) and weighted loss are containing it. However, the gap indicates the model has memorised some training-specific texture patterns that do not transfer perfectly to unseen ultrasound images.
 - Fold 3 shows a notable validation loss spike around epoch 16 (~0.58), likely from a difficult mini-batch. It recovers immediately, suggesting this is noise rather than a training instability.
 - The curves are reproducible across folds (all 3 show near-identical shape), which validates that the train/val gap reflects the model's structural behaviour rather than a lucky or unlucky data split.
-
+---
 ### ResNet-50
 
 Evaluated at threshold = 0.3 (lower than default 0.5 to improve malignant sensitivity):
