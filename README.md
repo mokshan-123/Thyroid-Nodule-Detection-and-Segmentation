@@ -482,16 +482,19 @@ When the ensemble's malignancy probability falls between 0.35 and 0.50, the CNN 
 ## Greedy Algorithm Edge Detection and segmantation Output
 - To draw a line around the nodule, i used classical image processing technique called Greedy algorithm (Active curves)
 - Print Some outputs
-![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
-![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
-![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+  
+![Image 1](GUI/thyroid_result1.jpg)
+![Image 2](GUI/thyroid_result2.jpg)
+
 
 ## App Outputs
 - Print some outputs
+-Interface 
+![Interface](GUI/Interface.png)
 
-![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
-![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
-![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+-Interface with output
+![Densenet Images](GUI/1.png)
+
 
 ---
 
