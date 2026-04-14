@@ -260,6 +260,11 @@ The detection model was trained for 10 epochs. Training loss decreased steadily 
 - Validation loss dropped sharply in the first 4 epochs then plateaued in the 0.110–0.124 range, with a minor spike at epoch 7 before recovering.
 - The ~0.036 train/val gap at epoch 10 is modest for a two-stage detector fine-tuned on a moderate-sized medical dataset, and does not indicate problematic overfitting.
 - The slight uptick in train loss at epoch 6 is characteristic of SGD with step-decay learning rate schedules (momentary instability at the LR step boundary).
+
+-Print some output images for comparison
+
+![RCNN Images](RCNN%20Model%20Data/comparison.png)
+
 ---
 ### DenseNet-121
 
@@ -300,6 +305,11 @@ The learning curves show a consistent train/val gap across all 3 folds — chara
 - The validation loss plateau is stable (no sustained divergence), meaning the model is not catastrophically overfitting — the dropout (p=0.5) and weighted loss are containing it. However, the gap indicates the model has memorised some training-specific texture patterns that do not transfer perfectly to unseen ultrasound images.
 - Fold 3 shows a notable validation loss spike around epoch 16 (~0.58), likely from a difficult mini-batch. It recovers immediately, suggesting this is noise rather than a training instability.
 - The curves are reproducible across folds (all 3 show near-identical shape), which validates that the train/val gap reflects the model's structural behaviour rather than a lucky or unlucky data split.
+
+-Print some output images for comparison
+
+![Densenet Images](DenseNet-121%20Model%20data/densenet_gt_vs_pred.png)
+
 ---
 ### ResNet-50
 
@@ -329,6 +339,10 @@ ResNet-50 at threshold 0.3 correctly identifies 634/731 malignant cases (86.7% r
 - Training loss decreases steadily from ~0.54–0.56 down to ~0.34–0.35 across all folds, with no sign of instability — confirming that the Adam optimiser with LR=3e-4 and the extended patience=10 setting allows stable convergence.
 - Best checkpoints are saved late (epochs 13, 18, 19), meaning the model continues to improve well into training and does not plateau early. This validates the increased patience setting (10 epochs) compared to DenseNet's 5.
 - The train/val accuracy gap in ResNet is much smaller than in DenseNet (~1–3% vs ~10%), confirming that ResNet-50 generalises more uniformly — likely due to the heavier augmentation (vertical flip, affine, Gaussian blur, random erasing) and TTA at inference time.
+
+-Print some output images for comparison
+
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
 
 ---
 
@@ -463,6 +477,21 @@ The ensemble's averaged softmax probability is compared to **0.32** (not 0.50) t
 ### RCNN Override Zone — 0.35 to 0.50
 
 When the ensemble's malignancy probability falls between 0.35 and 0.50, the CNN is considered uncertain and the RCNN's own class label is used instead. This range was chosen as the natural "uncertain" band around the malignancy threshold, where a second opinion from the detection head is most useful.
+
+---
+## Greedy Algorithm Edge Detection and segmantation Output
+- To draw a line around the nodule, i used classical image processing technique called Greedy algorithm (Active curves)
+- Print Some outputs
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+
+## App Outputs
+- Print some outputs
+
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
+![Densenet Images](ResNet-50%20model%20data/resnet_gt_vs_pred.png)
 
 ---
 
