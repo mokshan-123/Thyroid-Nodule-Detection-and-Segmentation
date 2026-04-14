@@ -239,7 +239,7 @@ This three-way logic means the RCNN's classification is only used as a tiebreake
 
 The detection model was trained for 10 epochs. Training loss decreased steadily from ~0.155 to ~0.074, while validation loss plateaued around 0.11 — indicating good generalisation without significant overfitting.
 
-![RCNN Training Curves](Training_curve_2.png)
+![RCNN Training Curves](RCNN%20Model%20Data/training%20curve.png)
 
 **Learning curve analysis:**
 
@@ -283,7 +283,7 @@ Test set confusion matrix (1000 samples — 269 benign, 731 malignant):
 
 DenseNet achieves high malignant recall (94%) which is the most clinically important metric — it misses only 43 malignant cases out of 731.
 
-![DenseNet Learning Curves](densenet_learning_curves.png)
+![DenseNet Learning Curves](DenseNet-121%20Model%20data/densenet_learning_curves.png)
 
 The learning curves show a consistent train/val gap across all 3 folds — characteristic of DenseNet's tendency to overfit slightly on smaller datasets, which is why dropout (p=0.5) was used in the classifier head.
 
@@ -314,7 +314,7 @@ Test set confusion matrix (1000 samples):
 
 ResNet-50 at threshold 0.3 correctly identifies 634/731 malignant cases (86.7% recall). The tighter train/val accuracy curves across all 3 folds compared to DenseNet suggest ResNet generalises more uniformly — confirming that the two models have complementary error patterns, which is what makes the ensemble effective.
 
-![ResNet Learning Curves](resnet_learning_curves.png)
+![ResNet Learning Curves](ResNet-50%20model%50data/resnet_learning_curves.png)
 
 **Learning curve analysis (3-Fold K-Fold):**
 
