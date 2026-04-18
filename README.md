@@ -499,6 +499,14 @@ When the ensemble's malignancy probability falls between 0.35 and 0.50, the CNN 
 
 
 ---
+## Model Output Comparison
+
+-Densnet
+![Image 1](GUI/thyroid_result1.jpg)
+![Image 2](GUI/thyroid_result2.jpg)
+![Image 1](GUI/thyroid_result1.jpg)
+
+---
 
 ## Project Structure
 
