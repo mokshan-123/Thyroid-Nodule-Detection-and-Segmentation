@@ -502,13 +502,13 @@ When the ensemble's malignancy probability falls between 0.35 and 0.50, the CNN 
 ---
 ## Model Output Comparison
 
--Densnet with 0.35 threshold
+### Densnet with 0.35 threshold
 ![Dense](Confusion_Matrices/Densenet_0.35.png)
 
--Resnet with 0.2 threshold
+### Resnet with 0.2 threshold
 ![Res](Confusion_Matrices/resnet_2.png)
 
--Ensemble with 0.28 threshold
+### Ensemble with 0.28 threshold
 ![Ensemble](Confusion_Matrices/confusion_matrix_0.28.png)
 
 **Even though we use ensemble in the project the densenet in much effective even though it tends to overfit**
