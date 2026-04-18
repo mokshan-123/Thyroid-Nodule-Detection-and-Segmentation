@@ -2,6 +2,8 @@
 
 A deep learning pipeline for detecting, segmenting, and classifying thyroid nodules in ultrasound images. The system combines **Faster R-CNN** for nodule detection, a **DenseNet-121 + ResNet-50 ensemble** for malignancy classification, and a **Greedy Snake (Active Contour)** algorithm for precise nodule boundary delineation — all served through a **Streamlit** web interface.
 
+**And Also Compare the results of Densenet-121, Resnet-50 and the ensembled system is one of the main objective of this project.**
+
 ---
 
 ## Table of Contents
