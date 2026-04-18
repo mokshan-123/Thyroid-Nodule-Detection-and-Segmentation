@@ -33,7 +33,7 @@ Thyroid nodule analysis in ultrasound imaging is challenging due to high speckle
 1. **Detect** nodule regions using Faster R-CNN
 2. **Crop** each detected region with a context margin
 3. **Classify** each crop as benign or malignant using an ensemble of DenseNet-121 and ResNet-50
-4. **Compare** the results od resnet, Densenet and ensemble separately
+4. **Compare** the results of resnet, Densenet and ensemble separately
 5. **Fuse** the CNN classification with the RCNN's own label prediction
 6. **Delineate** the nodule boundary using a Greedy Snake active contour
 7. **Display** all results in a Streamlit web UI with annotated images and confidence scores
